@@ -25,6 +25,7 @@ public class RegisterPage extends Utils
     private By _PasswordField = By.id("Password");
     private By _ConfirmPassword = By.id("ConfirmPassword");
     private By _registrationSubmitButtonField = By.id("register-button");
+   private By _Continue = By.xpath("//a[@class=\"button-1 register-continue-button\"]");
     // VerifyUserIsOnRegisterPage Test Case for Register Page.
     public void VerifyUserIsOnRegistrationPage(){
         // assert false() methods checks whether the expected value is false or not.
@@ -51,6 +52,7 @@ public class RegisterPage extends Utils
         EnterText(_ConfirmPassword,"Test123");
         WaitForElementToBeClickable(_registrationSubmitButtonField,30);
         ClickonElement(_registrationSubmitButtonField);
+        ClickonElement(_Continue);
 
 
     }

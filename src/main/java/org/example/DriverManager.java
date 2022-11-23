@@ -17,8 +17,6 @@ public class DriverManager extends Utils
     driver.get("https://demo.nopcommerce.com/");
     //  driver.get("http://omayo.blogspot.com/");
 }
-    public void closeBrowser(){
-        driver.quit();
-    }
+
 
 }
