@@ -25,7 +25,8 @@ public class TestSuit extends BaseTest
     EmailAFriend emailAFriend = new EmailAFriend();
     //Creating object of EmailResultPage
     EmailResultPage emailResultPage = new EmailResultPage();
-
+CameraPhotoPage cameraPhotoPage = new CameraPhotoPage();
+NikeProduct nikeProduct = new NikeProduct();
 //    @Test
 //    public void verifyEachProductHasName(){
 //        homepage.navigateToElectronicIsonHomePage();
@@ -35,7 +36,7 @@ public class TestSuit extends BaseTest
 //    }
 
     @Test
-    public void register() {
+    public void registerstrationDetails() {
         //click on register button
         homepage.verifyRegistrationButtonIsonHomePage();
         //Verify user is on register page
@@ -48,11 +49,20 @@ public class TestSuit extends BaseTest
 
 
     }
-    @Test
-    public void currencyButtonOnHomepage(){
-        // Method of Homepage class called through object
-        homepage.verifyToCurrencyButtonOnHomepage();
-    }
+   // @Test
+//    public void currencyButtonOnHomepage(){
+//        // Method of Homepage class called through object
+//        homepage.verifyToCurrencyButtonOnHomepage();
+//    }
+   @Test
+
+   public void currencySymbol()
+   {
+       homepage.verifyCorrectCurrencySButtonDisplayIsUSD();
+       homepage.verifyCorrectCurrencyButtonDisplayIsEuro();
+   }
+
+    //Test annotation to run test with using main method
     @Test
     public void VoteButtonOnHomepage(){
         // Method of Homepage class called through object
@@ -81,6 +91,16 @@ public class TestSuit extends BaseTest
         //verify user enter emailmessage successfully
         emailResultPage.verifyEmailMessageIsSentSuccessfully();
     }
-
-
+@Test
+    public void verifyNikeproduct(){
+        homepage.searchSStore();
+        nikeProduct.nikeProducts();
 }
+    @Test
+    public void verifyForTheHover() {
+
+        homepage.hoverOverAndNavigateToDesiredCategoryPage("Electronics","Camera & photo");
+        cameraPhotoPage.cameraAndPhotoResult();
+    }
+    }
+

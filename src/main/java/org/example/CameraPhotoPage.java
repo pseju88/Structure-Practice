@@ -4,7 +4,9 @@ package org.example;
 import org.openqa.selenium.By;
 //importing a package of selenium WbDriver
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CameraPhotoPage extends Utils {
@@ -15,5 +17,10 @@ public class CameraPhotoPage extends Utils {
 
             System.out.println(element.getText());
         }
+
+
+    }
+    public void cameraAndPhotoResult(){
+        waitForUrlToBe("https://demo.nopcommerce.com/camera-photo",20);
     }
 }
