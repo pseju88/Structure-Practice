@@ -39,7 +39,7 @@ public class RegisterPage extends Utils
 
        ClickonElement(_IconRegister);
         ClickonElement(_genderField);
-        EnterText(_firstNameField,"Sejal");
+        EnterText(_firstNameField,LoadPop.getProperty("FirstName"));
         EnterText(_lastnameField,"Patel");
 
         selectFromDropdownByVisibleText(_DateOfBirthDateField,"8");
